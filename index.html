@@ -1,19 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vale Avançar | Incubadora e Venture Capital</title>
-
+    <title>Valley Avançar | Incubadora e Venture Capital</title>
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Lucide Icons (Vanilla) -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -22,29 +19,30 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ["Inter", "sans-serif"],
+              sans: ['Inter', 'sans-serif'],
             },
             colors: {
               brand: {
-                dark: "#0f172a", // Slate 900
-                primary: "#2563eb", // Blue 600
-                accent: "#7c3aed", // Violet 600
-                light: "#f8fafc", // Slate 50
-              },
+                dark: '#000000', // Pure Black
+                primary: '#008000', // Green
+                accent: '#38B000', // Light Green
+                surface: '#09090b', // Zinc 950
+                surfaceLight: '#18181b' // Zinc 900
+              }
             },
             animation: {
-              scroll: "scroll 40s linear infinite",
-              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              'scroll': 'scroll 40s linear infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             },
             keyframes: {
               scroll: {
-                "0%": { transform: "translateX(0)" },
-                "100%": { transform: "translateX(-50%)" },
-              },
-            },
-          },
-        },
-      };
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            }
+          }
+        }
+      }
     </script>
     <style>
       /* Smooth scrolling */
@@ -60,11 +58,9 @@
       .fade-up {
         opacity: 0;
         transform: translateY(30px);
-        transition:
-          opacity 0.8s ease-out,
-          transform 0.8s ease-out;
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
       }
-
+      
       .fade-up.visible {
         opacity: 1;
         transform: translateY(0);
@@ -73,34 +69,21 @@
       /* Tech Grid Background Pattern */
       .bg-grid-pattern {
         background-size: 40px 40px;
-        background-image:
-          linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.05) 1px,
-            transparent 1px
-          ),
-          linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.05) 1px,
-            transparent 1px
-          );
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-        -webkit-mask-image: linear-gradient(
-          to bottom,
-          black 40%,
-          transparent 100%
-        );
+        -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
       }
 
-      /* Glass Effect for Cards */
+      /* Glass Effect for Cards (Dark Mode) */
       .glass-card {
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.02);
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.08);
       }
-
+      
       .dark-glass-card {
-        background: rgba(15, 23, 42, 0.6);
+        background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
@@ -110,67 +93,41 @@
         width: 10px;
       }
       ::-webkit-scrollbar-track {
-        background: #0f172a;
+        background: #09090b;
       }
       ::-webkit-scrollbar-thumb {
-        background: #334155;
+        background: #27272a;
         border-radius: 5px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #2563eb;
+        background: #008000;
       }
     </style>
-  </head>
-  <body
-    class="font-sans text-brand-dark bg-white antialiased selection:bg-brand-accent selection:text-white overflow-x-hidden"
-  >
+</head>
+<body class="font-sans text-gray-100 bg-brand-surface antialiased selection:bg-brand-primary selection:text-white overflow-x-hidden">
+
     <!-- Header -->
-    <header
-      id="main-header"
-      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 bg-transparent"
-    >
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 bg-transparent">
       <div class="container mx-auto px-6 flex justify-between items-center">
         <!-- Logo -->
         <a href="#" class="flex items-center gap-3 group">
-          <img
-            src="logo hub avançar.jpg"
-            alt="Vale Avançar Logo"
+          <img 
+            src="logo.png" 
+            alt="Valley Avançar Logo" 
             class="h-10 w-10 rounded-full object-cover border-2 border-brand-primary/50 group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-brand-primary/20"
-          />
-          <span
-            class="text-xl font-bold tracking-tight text-white transition-colors duration-300"
-            id="header-logo-text"
           >
-            Vale Avançar
+          <span class="text-xl font-bold tracking-tight text-white transition-colors duration-300" id="header-logo-text">
+            Valley Avançar
           </span>
         </a>
 
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center gap-8">
-          <a
-            href="#timeline"
-            class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-            >O Caminho</a
-          >
-          <a
-            href="#glossary"
-            class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-            >Ecossistema</a
-          >
-          <a
-            href="#features"
-            class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-            >Diferenciais</a
-          >
-          <a
-            href="#team"
-            class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-            >Equipe</a
-          >
-          <a
-            href="#registration"
-            class="px-5 py-2.5 bg-white text-brand-dark text-sm font-bold rounded-full hover:bg-gray-100 transition-colors shadow-md hover:shadow-xl"
-          >
+          <a href="#timeline" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">O Caminho</a>
+          <a href="#glossary" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Ecossistema</a>
+          <a href="#features" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Diferenciais</a>
+          <a href="#team" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Equipe</a>
+          <a href="#registration" class="px-5 py-2.5 bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-bold rounded-full hover:shadow-[0_0_20px_rgba(0,128,0,0.5)] transition-all shadow-md">
             Fazer Parte
           </a>
         </nav>
@@ -181,1138 +138,644 @@
         </button>
       </div>
 
-      <!-- Mobile Menu Overlay (New Sidebar Structure) -->
-      <div
-        id="mobile-menu-overlay"
-        class="fixed inset-0 z-[100] hidden"
-        aria-labelledby="mobile-menu"
-        role="dialog"
-        aria-modal="true"
-      >
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu-overlay" class="fixed inset-0 z-[100] hidden" aria-labelledby="mobile-menu" role="dialog" aria-modal="true">
         <!-- Backdrop with Blur -->
-        <div
-          id="mobile-menu-backdrop"
-          class="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"
-        ></div>
+        <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
 
         <!-- Right Sidebar Panel -->
-        <div
-          id="mobile-menu-panel"
-          class="absolute right-0 top-0 h-full w-[280px] bg-brand-dark border-l border-gray-800 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col"
-        >
-          <div
-            class="flex items-center justify-between p-6 border-b border-gray-800"
-          >
-            <span class="text-xl font-bold text-white">Menu</span>
-            <button
-              id="mobile-menu-close"
-              class="text-gray-400 hover:text-white transition-colors"
-            >
-              <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
-          </div>
-
-          <div class="flex flex-col p-6 gap-6 overflow-y-auto">
-            <a
-              href="#timeline"
-              class="text-gray-300 hover:text-white text-lg font-medium mobile-link transition-colors flex items-center gap-3"
-            >
-              <i
-                data-lucide="git-branch"
-                class="w-5 h-5 text-brand-primary"
-              ></i>
-              O Caminho
-            </a>
-            <a
-              href="#glossary"
-              class="text-gray-300 hover:text-white text-lg font-medium mobile-link transition-colors flex items-center gap-3"
-            >
-              <i data-lucide="book-open" class="w-5 h-5 text-brand-primary"></i>
-              Ecossistema
-            </a>
-            <a
-              href="#features"
-              class="text-gray-300 hover:text-white text-lg font-medium mobile-link transition-colors flex items-center gap-3"
-            >
-              <i data-lucide="star" class="w-5 h-5 text-brand-primary"></i>
-              Diferenciais
-            </a>
-            <a
-              href="#team"
-              class="text-gray-300 hover:text-white text-lg font-medium mobile-link transition-colors flex items-center gap-3"
-            >
-              <i data-lucide="users" class="w-5 h-5 text-brand-primary"></i>
-              Equipe
-            </a>
-
-            <div class="pt-6 mt-auto border-t border-gray-800">
-              <a
-                href="#registration"
-                class="w-full py-3 bg-brand-primary text-white text-center font-bold rounded-lg mobile-link shadow-lg hover:bg-blue-600 transition-colors flex items-center justify-center gap-2"
-              >
-                <span>Quero fazer parte</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
+        <div id="mobile-menu-panel" class="absolute right-0 top-0 h-full w-[280px] bg-brand-surface border-l border-white/10 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+            
+            <div class="flex items-center justify-between p-6 border-b border-white/10">
+                <span class="text-xl font-bold text-white">Menu</span>
+                <button id="mobile-menu-close" class="text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
             </div>
-          </div>
+
+            <div class="flex flex-col p-6 gap-6 overflow-y-auto">
+                <a href="#timeline" class="text-gray-300 hover:text-brand-accent text-lg font-medium mobile-link transition-colors flex items-center gap-3">
+                    <i data-lucide="git-branch" class="w-5 h-5 text-brand-primary"></i> O Caminho
+                </a>
+                <a href="#glossary" class="text-gray-300 hover:text-brand-accent text-lg font-medium mobile-link transition-colors flex items-center gap-3">
+                    <i data-lucide="book-open" class="w-5 h-5 text-brand-primary"></i> Ecossistema
+                </a>
+                <a href="#features" class="text-gray-300 hover:text-brand-accent text-lg font-medium mobile-link transition-colors flex items-center gap-3">
+                    <i data-lucide="star" class="w-5 h-5 text-brand-primary"></i> Diferenciais
+                </a>
+                <a href="#team" class="text-gray-300 hover:text-brand-accent text-lg font-medium mobile-link transition-colors flex items-center gap-3">
+                    <i data-lucide="users" class="w-5 h-5 text-brand-primary"></i> Equipe
+                </a>
+                
+                <div class="pt-6 mt-auto border-t border-white/10">
+                    <a href="#registration" class="w-full py-3 bg-gradient-to-r from-brand-primary to-brand-accent text-white text-center font-bold rounded-lg mobile-link shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
+                        <span>Quero fazer parte</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- Hero Section -->
-      <section
-        class="relative w-full h-screen min-h-[600px] flex items-start justify-center overflow-hidden"
-      >
-        <!-- Background Image -->
-        <div class="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop"
-            alt="Startup team"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/80 to-brand-primary/40"
-          ></div>
-        </div>
-
-        <!-- Tech Grid Overlay -->
-        <div
-          class="absolute inset-0 z-0 bg-grid-pattern opacity-30 pointer-events-none"
-        ></div>
-
-        <!-- Content -->
-        <div
-          class="relative z-10 container mx-auto px-6 text-center md:text-left pt-32 md:pt-48"
-        >
-          <div class="max-w-4xl">
-            <span
-              class="fade-up inline-block px-4 py-2 mb-6 rounded-full bg-brand-accent/20 border border-brand-accent text-brand-accent text-[10px] sm:text-xs md:text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(124,58,237,0.3)] backdrop-blur-md whitespace-nowrap text-white"
-            >
-              <span class="animate-pulse mr-2">●</span> Incubadora • Aceleradora
-              • Venture Capital
-            </span>
-
-            <h1
-              class="fade-up text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight drop-shadow-xl"
-              style="transition-delay: 200ms"
-            >
-              Transformando ideias em
-              <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-300"
-                >startups de alto impacto</span
-              >
-            </h1>
-
-            <p
-              class="fade-up text-lg md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl font-light"
-              style="transition-delay: 400ms"
-            >
-              O Vale Avançar é o ecossistema definitivo. Da estruturação do MVP
-              à escala global e rodadas de investimento Série A.
-            </p>
-
-            <div
-              class="fade-up flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
-              style="transition-delay: 600ms"
-            >
-              <a
-                href="#timeline"
-                class="px-8 py-4 bg-brand-primary text-white font-bold rounded-lg hover:bg-blue-600 hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_rgba(37,99,235,0.4)] flex items-center justify-center gap-2 group text-lg"
-              >
-                Conheça o Programa
-                <i
-                  data-lucide="arrow-right"
-                  class="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                ></i>
-              </a>
-              <a
-                href="#video-section"
-                class="px-8 py-4 bg-white/5 border border-white/20 text-white font-bold rounded-lg hover:bg-white/10 hover:border-white/40 transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 text-lg"
-              >
-                <i data-lucide="play-circle" class="w-5 h-5"></i>
-                Entenda o Vale
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Decoration -->
-        <div
-          class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-accent/30 rounded-full blur-[128px] filter opacity-50 pointer-events-none animate-pulse-slow"
-        ></div>
-      </section>
-
-      <!-- Stats Section (NEW - HIGH IMPACT) -->
-      <section class="relative z-20 -mt-8 mb-16">
-        <div class="container mx-auto px-6">
-          <div
-            class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-brand-dark p-8 rounded-2xl shadow-2xl border border-gray-800"
-          >
-            <div
-              class="text-center md:text-left border-r border-gray-800 last:border-0"
-            >
-              <h3 class="text-3xl md:text-4xl font-black text-white mb-1">
-                R$ 50M+
-              </h3>
-              <p
-                class="text-xs md:text-sm text-gray-400 uppercase tracking-wider"
-              >
-                Investidos
-              </p>
-            </div>
-            <div
-              class="text-center md:text-left border-r border-gray-800 last:border-0"
-            >
-              <h3 class="text-3xl md:text-4xl font-black text-white mb-1">
-                200+
-              </h3>
-              <p
-                class="text-xs md:text-sm text-gray-400 uppercase tracking-wider"
-              >
-                Startups Aceleradas
-              </p>
-            </div>
-            <div
-              class="text-center md:text-left border-r border-gray-800 last:border-0"
-            >
-              <h3 class="text-3xl md:text-4xl font-black text-white mb-1">
-                85+
-              </h3>
-              <p
-                class="text-xs md:text-sm text-gray-400 uppercase tracking-wider"
-              >
-                Mentores Globais
-              </p>
-            </div>
-            <div
-              class="text-center md:text-left border-r border-gray-800 last:border-0"
-            >
-              <h3 class="text-3xl md:text-4xl font-black text-white mb-1">
-                15
-              </h3>
-              <p
-                class="text-xs md:text-sm text-gray-400 uppercase tracking-wider"
-              >
-                Exits Realizados
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Partners Marquee (NEW - PROOF) -->
-      <section class="py-12 bg-white overflow-hidden">
-        <div class="container mx-auto px-6 mb-8 text-center">
-          <span
-            class="text-sm font-bold text-gray-400 uppercase tracking-widest"
-            >Empresas e Parceiros do Ecossistema</span
-          >
-        </div>
-        <div class="relative w-full overflow-hidden">
-          <div class="flex animate-scroll whitespace-nowrap">
-            <!-- Placeholder Logos duplicated for infinite scroll -->
-            <div
-              class="flex items-center gap-16 px-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-300"
-            >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="triangle" class="fill-current"></i> NEXUS</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="circle" class="fill-current"></i> ORBITAL</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="square" class="fill-current"></i>
-                BLOCKCHAIN</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="hexagon" class="fill-current"></i> SYNTH</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="zap" class="fill-current"></i> VELOCITY</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="cloud" class="fill-current"></i> CLOUDIFY</span
-              >
-              <!-- Duplicate -->
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2 ml-16"
-                ><i data-lucide="triangle" class="fill-current"></i> NEXUS</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="circle" class="fill-current"></i> ORBITAL</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="square" class="fill-current"></i>
-                BLOCKCHAIN</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="hexagon" class="fill-current"></i> SYNTH</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="zap" class="fill-current"></i> VELOCITY</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="cloud" class="fill-current"></i> CLOUDIFY</span
-              >
-              <!-- Duplicate 2 -->
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2 ml-16"
-                ><i data-lucide="triangle" class="fill-current"></i> NEXUS</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="circle" class="fill-current"></i> ORBITAL</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="square" class="fill-current"></i>
-                BLOCKCHAIN</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="hexagon" class="fill-current"></i> SYNTH</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="zap" class="fill-current"></i> VELOCITY</span
-              >
-              <span
-                class="text-2xl font-black text-gray-800 flex items-center gap-2"
-                ><i data-lucide="cloud" class="fill-current"></i> CLOUDIFY</span
-              >
-            </div>
-          </div>
-          <!-- Gradient Masks -->
-          <div
-            class="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-10"
-          ></div>
-          <div
-            class="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10"
-          ></div>
-        </div>
-      </section>
-
-      <!-- Video Section -->
-      <section
-        id="video-section"
-        class="py-24 bg-brand-light relative overflow-hidden"
-      >
-        <div class="container mx-auto px-6">
-          <div class="flex flex-col lg:flex-row gap-16 items-center">
-            <!-- Video -->
-            <div class="fade-up w-full lg:w-1/2">
-              <div
-                class="relative aspect-video bg-gray-900 rounded-2xl shadow-2xl overflow-hidden group cursor-pointer border-4 border-white"
-              >
+        <!-- Hero Section -->
+        <section class="relative w-full h-screen min-h-[600px] flex items-start justify-center overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop"
-                  alt="Video Thumbnail"
-                  class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop"
+                  alt="Modern Office Space"
+                  class="w-full h-full object-cover"
                 />
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div
-                    class="w-20 h-20 bg-brand-primary/90 rounded-full flex items-center justify-center shadow-lg group-hover:bg-brand-accent transition-colors duration-300"
-                  >
-                    <div
-                      class="w-0 h-0 border-t-[12px] border-t-transparent border-l-[24px] border-l-white border-b-[12px] border-b-transparent ml-2"
-                    ></div>
-                  </div>
-                </div>
-                <div class="absolute bottom-6 left-6 text-white">
-                  <p
-                    class="text-sm font-semibold uppercase tracking-wider text-blue-300"
-                  >
-                    Vídeo Institucional
-                  </p>
-                  <h3 class="text-xl font-bold">
-                    Entenda o que é o Vale Avançar
-                  </h3>
-                </div>
-              </div>
+                <!-- Gradient overlay adjusted: darker at bottom, hint of green -->
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-surface/95 via-brand-surface/80 to-brand-primary/10"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-surface/40 to-brand-surface"></div>
             </div>
 
-            <!-- Text -->
-            <div
-              class="fade-up w-full lg:w-1/2 space-y-8"
-              style="transition-delay: 200ms"
-            >
-              <div>
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                  Um Ecossistema Integrado
-                </h2>
-                <p class="text-gray-600 leading-relaxed">
-                  Não somos apenas um escritório. Somos parceiros estratégicos
-                  que atuam em diferentes frentes para garantir o sucesso do seu
-                  negócio.
-                </p>
-              </div>
+            <!-- Tech Grid Overlay -->
+            <div class="absolute inset-0 z-0 bg-grid-pattern opacity-30 pointer-events-none"></div>
 
-              <div class="space-y-6">
-                <div class="flex gap-4">
-                  <div
-                    class="mt-1 flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-brand-primary"
-                  >
-                    <i data-lucide="lightbulb" class="w-6 h-6"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-lg font-bold text-gray-900">Incubadora</h4>
-                    <p class="text-gray-600 text-sm">
-                      Apoio inicial para transformar ideias em projetos
-                      concretos, focando na estruturação e primeiros passos.
+            <!-- Content -->
+            <div class="relative z-10 container mx-auto px-6 text-center md:text-left pt-32 md:pt-48">
+                <div class="max-w-4xl">
+                    <span class="fade-up inline-block px-4 py-2 mb-6 rounded-full bg-white/5 border border-brand-primary/30 text-brand-accent text-[10px] sm:text-xs md:text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(0,128,0,0.2)] backdrop-blur-md whitespace-nowrap">
+                        <span class="animate-pulse mr-2 text-white">●</span> Incubadora • Aceleradora • Venture Capital
+                    </span>
+
+                    <h1 class="fade-up text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight drop-shadow-xl" style="transition-delay: 200ms;">
+                        Transformando ideias em <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-accent to-brand-primary">startups de alto impacto</span>
+                    </h1>
+
+                    <p class="fade-up text-lg md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl font-light" style="transition-delay: 400ms;">
+                        A Valley Avançar é o ecossistema definitivo.
+                        Da estruturação do MVP à escala global e rodadas de investimento Série A.
                     </p>
-                  </div>
-                </div>
-                <div class="flex gap-4">
-                  <div
-                    class="mt-1 flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-brand-accent"
-                  >
-                    <i data-lucide="rocket" class="w-6 h-6"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-lg font-bold text-gray-900">Aceleradora</h4>
-                    <p class="text-gray-600 text-sm">
-                      Programas intensivos de crescimento rápido, mentorias e
-                      networking para ganhar tração no mercado.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex gap-4">
-                  <div
-                    class="mt-1 flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600"
-                  >
-                    <i data-lucide="briefcase" class="w-6 h-6"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-lg font-bold text-gray-900">
-                      Venture Capital
-                    </h4>
-                    <p class="text-gray-600 text-sm">
-                      Capital de risco para impulsionar a escala, com aportes
-                      financeiros estratégicos em diferentes rodadas.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Timeline Section -->
-      <section
-        id="timeline"
-        class="py-24 bg-brand-dark relative overflow-hidden"
-      >
-        <!-- Tech Grid Overlay -->
-        <div
-          class="absolute inset-0 z-0 bg-grid-pattern opacity-10 pointer-events-none"
-        ></div>
-
-        <div
-          class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20"
-        >
-          <div
-            class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary rounded-full blur-[100px]"
-          ></div>
-          <div
-            class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-accent rounded-full blur-[100px]"
-          ></div>
-        </div>
-
-        <div class="container mx-auto px-6 relative z-10">
-          <div class="text-center mb-16 fade-up">
-            <h2
-              class="text-sm font-bold text-brand-accent uppercase tracking-wider mb-2"
-            >
-              Jornada do Empreendedor
-            </h2>
-            <h3 class="text-3xl md:text-5xl font-black text-white">
-              O Caminho da Startup
-            </h3>
-            <p class="text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
-              Entenda as fases que transformam um projeto em um negócio
-              escalável dentro do nosso ecossistema.
-            </p>
-          </div>
-
-          <div class="relative max-w-5xl mx-auto">
-            <!-- Vertical Line -->
-            <div
-              class="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-primary via-brand-accent to-brand-primary/20 md:-translate-x-1/2 shadow-[0_0_10px_rgba(37,99,235,0.5)]"
-            ></div>
-            <!-- Container for JS injected items -->
-            <div id="timeline-container" class="space-y-16"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Features Section -->
-      <section id="features" class="py-24 bg-gray-50">
-        <div class="container mx-auto px-6">
-          <div class="flex flex-col lg:flex-row gap-16">
-            <div class="lg:w-1/3 fade-up">
-              <h2
-                class="text-4xl md:text-5xl font-black text-brand-dark mb-6 leading-tight"
-              >
-                Por que escolher o <br /><span
-                  class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent"
-                  >Vale Avançar</span
-                >?
-              </h2>
-              <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                Acreditamos que capital financeiro é commodity. O que realmente
-                muda o jogo é o
-                <strong>capital intelectual e relacional</strong> que
-                oferecemos.
-              </p>
-              <a
-                href="#registration"
-                class="hidden lg:inline-flex items-center px-8 py-4 bg-brand-dark text-white font-bold rounded-lg hover:bg-gray-800 transition-all shadow-xl hover:shadow-2xl"
-              >
-                Fale com um consultor
-              </a>
-            </div>
-            <!-- Container for JS injected features -->
-            <div
-              id="features-container"
-              class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6"
-            ></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Glossary Section -->
-      <section id="glossary" class="py-24 bg-white relative">
-        <div class="container mx-auto px-6">
-          <div class="text-center mb-16 fade-up">
-            <h2 class="text-3xl font-bold text-gray-900">
-              Glossário de Venture Capital
-            </h2>
-            <p class="text-gray-600 mt-4">
-              Domine a linguagem do Venture Capital para negociar melhor.
-            </p>
-          </div>
-          <!-- Container for JS injected items -->
-          <div
-            id="glossary-container"
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          ></div>
-        </div>
-      </section>
-
-      <!-- Team Section -->
-      <section id="team" class="py-24 bg-brand-dark text-white relative">
-        <div
-          class="absolute inset-0 z-0 bg-grid-pattern opacity-10 pointer-events-none"
-        ></div>
-        <div class="container mx-auto px-6 relative z-10">
-          <div class="text-center mb-16 fade-up">
-            <h2 class="text-4xl font-black mb-4">Quem Faz Acontecer</h2>
-          </div>
-          <!-- Container for JS injected items -->
-          <div
-            id="team-container"
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12"
-          ></div>
-        </div>
-      </section>
-
-      <!-- Registration Section -->
-      <section
-        id="registration"
-        class="py-24 bg-brand-light relative overflow-hidden"
-      >
-        <!-- Background decorations -->
-        <div
-          class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl"
-        ></div>
-        <div
-          class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl"
-        ></div>
-
-        <div class="container mx-auto px-6 relative z-10">
-          <div class="text-center mb-16 fade-up">
-            <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6">
-              Inscreva sua Startup
-            </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-              Dê o primeiro passo para transformar sua ideia em um negócio
-              escalável com o apoio dos melhores.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <!-- Option 1: Direct Registration (Takes up 2 cols on lg) -->
-            <div class="lg:col-span-2 fade-up">
-              <div
-                class="glass-card rounded-2xl shadow-xl overflow-hidden bg-white"
-              >
-                <div class="p-8 border-b border-gray-100 bg-gray-50/80">
-                  <div class="flex items-center gap-3 mb-2">
-                    <div
-                      class="bg-brand-primary/10 p-2 rounded-lg text-brand-primary"
-                    >
-                      <i data-lucide="file-text" class="w-5 h-5"></i>
+                    <div class="fade-up flex flex-col sm:flex-row gap-4 justify-center md:justify-start" style="transition-delay: 600ms;">
+                        <a href="#timeline" class="px-8 py-4 bg-gradient-to-r from-brand-primary to-brand-accent text-white font-bold rounded-lg hover:brightness-110 hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_rgba(0,128,0,0.4)] flex items-center justify-center gap-2 group text-lg">
+                            Conheça o Programa
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#video-section" class="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-lg hover:bg-white/10 hover:border-brand-primary/50 transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 text-lg">
+                            <i data-lucide="play-circle" class="w-5 h-5"></i>
+                            Entenda o Valley
+                        </a>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900">
-                      Cadastro Direto
-                    </h3>
-                  </div>
-                  <p class="text-sm text-gray-500 ml-12">
-                    Preencha o formulário abaixo para iniciar sua jornada
-                    conosco.
-                  </p>
                 </div>
+            </div>
+            
+            <!-- Decoration -->
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-primary/10 rounded-full blur-[128px] filter opacity-50 pointer-events-none animate-pulse-slow"></div>
+        </section>
 
-                <div class="p-8">
-                  <form id="startup-form" class="space-y-6">
-                    <!-- Success Message Container (Hidden by default) -->
-                    <div id="form-success" class="hidden text-center py-12">
-                      <div
-                        class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4"
-                      >
-                        <i data-lucide="check" class="w-8 h-8"></i>
-                      </div>
-                      <h4 class="text-xl font-bold text-gray-900 mb-2">
-                        Cadastro Recebido!
-                      </h4>
-                      <p class="text-gray-600">
-                        Sua inscrição foi enviada com sucesso. Nossa equipe
-                        entrará em contato em breve.
-                      </p>
-                      <button
-                        type="button"
-                        onclick="resetForm()"
-                        class="mt-6 text-brand-primary font-medium hover:underline"
-                      >
-                        Enviar nova inscrição
-                      </button>
+        <!-- Stats Section -->
+        <section class="relative z-20 mt-0 mb-16">
+            <div class="container mx-auto px-6">
+                <!-- Changed bg to surfaceLight for contrast against main surface -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-brand-surfaceLight p-8 rounded-2xl shadow-2xl border border-white/5">
+                    <div class="text-center md:text-left border-r border-white/5 last:border-0">
+                        <h3 class="text-3xl md:text-4xl font-black text-white mb-1">R$ 50M+</h3>
+                        <p class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Investidos</p>
                     </div>
+                    <div class="text-center md:text-left border-r border-white/5 last:border-0">
+                        <h3 class="text-3xl md:text-4xl font-black text-white mb-1">200+</h3>
+                        <p class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Startups Aceleradas</p>
+                    </div>
+                    <div class="text-center md:text-left border-r border-white/5 last:border-0">
+                        <h3 class="text-3xl md:text-4xl font-black text-white mb-1">85+</h3>
+                        <p class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Mentores Globais</p>
+                    </div>
+                    <div class="text-center md:text-left border-r border-white/5 last:border-0">
+                        <h3 class="text-3xl md:text-4xl font-black text-white mb-1">15</h3>
+                        <p class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Exits Realizados</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Fields Container -->
-                    <div id="form-fields" class="space-y-6">
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                          <label
-                            for="startup-name"
-                            class="text-sm font-medium text-gray-700"
-                            >Nome da Startup</label
-                          >
-                          <input
-                            type="text"
-                            id="startup-name"
-                            required
-                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all"
-                            placeholder="Ex: TechSolution"
-                          />
-                        </div>
-                        <div class="space-y-2">
-                          <label
-                            for="founder-name"
-                            class="text-sm font-medium text-gray-700"
-                            >Nome do Fundador</label
-                          >
-                          <input
-                            type="text"
-                            id="founder-name"
-                            required
-                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all"
-                            placeholder="Seu nome completo"
-                          />
-                        </div>
-                      </div>
+        <!-- Partners Marquee -->
+        <section class="py-12 bg-black overflow-hidden border-y border-white/5">
+             <div class="container mx-auto px-6 mb-8 text-center">
+                <span class="text-sm font-bold text-gray-500 uppercase tracking-widest">Empresas e Parceiros do Ecossistema</span>
+            </div>
+            <div class="relative w-full overflow-hidden">
+                <div class="flex animate-scroll whitespace-nowrap">
+                    <!-- Logos with White Icons -->
+                    <div class="flex items-center gap-16 px-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-300 text-white">
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="triangle" class="fill-current text-white"></i> NEXUS</span>
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="circle" class="fill-current text-white"></i> ORBITAL</span>
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="square" class="fill-current text-white"></i> BLOCKCHAIN</span>
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="hexagon" class="fill-current text-white"></i> SYNTH</span>
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="zap" class="fill-current text-white"></i> VELOCITY</span>
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="cloud" class="fill-current text-white"></i> CLOUDIFY</span>
+                         <!-- Duplicate -->
+                         <span class="text-2xl font-black flex items-center gap-2 ml-16"><i data-lucide="triangle" class="fill-current text-white"></i> NEXUS</span>
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="circle" class="fill-current text-white"></i> ORBITAL</span>
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="square" class="fill-current text-white"></i> BLOCKCHAIN</span>
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="hexagon" class="fill-current text-white"></i> SYNTH</span>
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="zap" class="fill-current text-white"></i> VELOCITY</span>
+                         <span class="text-2xl font-black flex items-center gap-2"><i data-lucide="cloud" class="fill-current text-white"></i> CLOUDIFY</span>
+                    </div>
+                </div>
+                <!-- Gradient Masks -->
+                <div class="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-black to-transparent z-10"></div>
+                <div class="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-black to-transparent z-10"></div>
+            </div>
+        </section>
 
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                          <label
-                            for="email"
-                            class="text-sm font-medium text-gray-700"
-                            >E-mail Corporativo</label
-                          >
-                          <input
-                            type="email"
-                            id="email"
-                            required
-                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all"
-                            placeholder="contato@suaempresa.com"
-                          />
-                        </div>
-                        <div class="space-y-2">
-                          <label
-                            for="phone"
-                            class="text-sm font-medium text-gray-700"
-                            >Telefone / WhatsApp</label
-                          >
-                          <input
-                            type="tel"
-                            id="phone"
-                            required
-                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all"
-                            placeholder="(00) 00000-0000"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                          <label
-                            for="location"
-                            class="text-sm font-medium text-gray-700"
-                            >Cidade / Estado</label
-                          >
-                          <input
-                            type="text"
-                            id="location"
-                            required
-                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all"
-                            placeholder="São Paulo, SP"
-                          />
-                        </div>
-                        <div class="space-y-2">
-                          <label
-                            for="stage"
-                            class="text-sm font-medium text-gray-700"
-                            >Estágio Atual</label
-                          >
-                          <div class="relative">
-                            <select
-                              id="stage"
-                              required
-                              class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all appearance-none text-gray-700"
-                            >
-                              <option value="" disabled selected>
-                                Selecione uma opção
-                              </option>
-                              <option value="ideia">
-                                Ideação (Apenas a ideia)
-                              </option>
-                              <option value="mvp">
-                                MVP (Produto Mínimo Viável)
-                              </option>
-                              <option value="validacao">
-                                Validação (Primeiros testes)
-                              </option>
-                              <option value="tracao">Tração (Já fatura)</option>
-                            </select>
-                            <div
-                              class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-500"
-                            >
-                              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+        <!-- Video Section -->
+        <section id="video-section" class="py-24 bg-brand-surfaceLight relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    
+                    <!-- Video -->
+                    <div class="fade-up w-full lg:w-1/2">
+                        <div class="relative aspect-video bg-gray-900 rounded-2xl shadow-2xl overflow-hidden group cursor-pointer border-4 border-white/5">
+                            <img 
+                                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop" 
+                                alt="Video Thumbnail" 
+                                class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-20 h-20 bg-brand-primary/90 rounded-full flex items-center justify-center shadow-lg group-hover:bg-brand-accent transition-colors duration-300">
+                                    <div class="w-0 h-0 border-t-[12px] border-t-transparent border-l-[24px] border-l-white border-b-[12px] border-b-transparent ml-2"></div>
+                                </div>
                             </div>
-                          </div>
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <p class="text-sm font-semibold uppercase tracking-wider text-brand-accent">Vídeo Institucional</p>
+                                <h3 class="text-xl font-bold">Entenda o que é o Valley Avançar</h3>
+                            </div>
                         </div>
-                      </div>
-
-                      <div class="space-y-2">
-                        <label
-                          for="description"
-                          class="text-sm font-medium text-gray-700"
-                          >Breve descrição do negócio</label
-                        >
-                        <textarea
-                          id="description"
-                          rows="4"
-                          required
-                          class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all resize-none"
-                          placeholder="Conte-nos o que sua startup faz e qual problema ela resolve..."
-                        ></textarea>
-                      </div>
-
-                      <div class="flex items-start gap-3 pt-2">
-                        <div class="flex items-center h-5">
-                          <input
-                            id="terms"
-                            type="checkbox"
-                            required
-                            class="w-4 h-4 text-brand-primary border-gray-300 rounded focus:ring-brand-primary focus:ring-offset-0"
-                          />
-                        </div>
-                        <label for="terms" class="text-sm text-gray-500">
-                          Concordo com os
-                          <a href="#" class="text-brand-primary hover:underline"
-                            >termos de privacidade</a
-                          >
-                          e autorizo o contato da equipe Vale Avançar.
-                        </label>
-                      </div>
-
-                      <button
-                        type="submit"
-                        class="w-full py-4 bg-brand-primary hover:bg-blue-700 text-white font-bold rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 group"
-                      >
-                        <span>Cadastrar Startup</span>
-                        <i
-                          data-lucide="send"
-                          class="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                        ></i>
-                      </button>
                     </div>
-                  </form>
+
+                    <!-- Text -->
+                    <div class="fade-up w-full lg:w-1/2 space-y-8" style="transition-delay: 200ms;">
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-4">Um Ecossistema Integrado</h2>
+                            <p class="text-gray-400 leading-relaxed">
+                                Não somos apenas um escritório. Somos parceiros estratégicos que atuam em diferentes frentes para garantir o sucesso do seu negócio.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <!-- Icon: White on dark BG -->
+                                <div class="mt-1 flex-shrink-0 w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-white border border-white/10">
+                                    <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">Incubadora</h4>
+                                    <p class="text-gray-400 text-sm">Apoio inicial para transformar ideias em projetos concretos, focando na estruturação e primeiros passos.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="mt-1 flex-shrink-0 w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-white border border-white/10">
+                                    <i data-lucide="rocket" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">Aceleradora</h4>
+                                    <p class="text-gray-400 text-sm">Programas intensivos de crescimento rápido, mentorias e networking para ganhar tração no mercado.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="mt-1 flex-shrink-0 w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-white border border-white/10">
+                                    <i data-lucide="briefcase" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">Venture Capital</h4>
+                                    <p class="text-gray-400 text-sm">Capital de risco para impulsionar a escala, com aportes financeiros estratégicos em diferentes rodadas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section with Green Gradient -->
+        <section id="timeline" class="py-24 relative overflow-hidden bg-gradient-to-b from-brand-surface to-[#0B3B0B]">
+            <!-- Tech Grid Overlay -->
+            <div class="absolute inset-0 z-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+            
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-primary rounded-full blur-[150px]"></div>
             </div>
 
-            <!-- Option 2: External Link (Takes up 1 col on lg, sticky maybe?) -->
-            <div class="lg:col-span-1 fade-up" style="transition-delay: 200ms">
-              <div
-                class="bg-brand-dark text-white rounded-2xl shadow-xl overflow-hidden sticky top-24 border border-gray-700"
-              >
-                <div class="p-8 relative overflow-hidden">
-                  <!-- Decoration -->
-                  <div
-                    class="absolute top-0 right-0 -mr-12 -mt-12 w-40 h-40 bg-brand-accent/20 rounded-full blur-2xl"
-                  ></div>
-
-                  <div
-                    class="flex items-center justify-center w-16 h-16 bg-white/10 rounded-2xl mb-6 backdrop-blur-sm"
-                  >
-                    <i
-                      data-lucide="external-link"
-                      class="w-8 h-8 text-white"
-                    ></i>
-                  </div>
-
-                  <h3 class="text-2xl font-bold mb-4">
-                    Prefere usar o Google Forms?
-                  </h3>
-                  <p class="text-gray-300 mb-8 leading-relaxed">
-                    Caso você já tenha seus dados organizados ou prefira a
-                    interface do Google, utilize nosso formulário externo. A
-                    análise será a mesma.
-                  </p>
-
-                  <a
-                    href="https://docs.google.com/forms"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="block w-full py-4 bg-white text-brand-dark font-bold text-center rounded-lg hover:bg-gray-100 transition-colors shadow-lg flex items-center justify-center gap-2 group"
-                  >
-                    <span>Cadastrar via Google Forms</span>
-                    <i
-                      data-lucide="arrow-up-right"
-                      class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                    ></i>
-                  </a>
-
-                  <div class="mt-8 pt-8 border-t border-white/10">
-                    <h4
-                      class="font-bold mb-2 text-sm uppercase tracking-wider text-brand-primary"
-                    >
-                      Dúvidas?
-                    </h4>
-                    <p class="text-sm text-gray-400 mb-4">
-                      Nossa equipe de suporte está disponível para auxiliar no
-                      processo.
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-16 fade-up">
+                    <h2 class="text-sm font-bold text-brand-accent uppercase tracking-wider mb-2">Jornada do Empreendedor</h2>
+                    <h3 class="text-3xl md:text-5xl font-black text-white">O Caminho da Startup</h3>
+                    <p class="text-gray-300 mt-4 max-w-2xl mx-auto text-lg">
+                        Entenda as fases que transformam um projeto em um negócio escalável dentro do nosso ecossistema.
                     </p>
-                    <a
-                      href="#contact"
-                      class="text-sm font-medium text-white hover:text-brand-primary transition-colors flex items-center gap-2"
-                    >
-                      <i data-lucide="message-circle" class="w-4 h-4"></i>
-                      Fale conosco
-                    </a>
-                  </div>
                 </div>
-              </div>
+
+                <div class="relative max-w-5xl mx-auto">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-primary via-brand-accent to-brand-surface md:-translate-x-1/2 shadow-[0_0_10px_rgba(0,128,0,0.5)]"></div>
+                    <!-- Container for JS injected items -->
+                    <div id="timeline-container" class="space-y-16"></div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-24 bg-brand-surface">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-16">
+                    <div class="lg:w-1/3 fade-up">
+                        <h2 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                            Por que escolher o <br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Valley Avançar</span>?
+                        </h2>
+                        <p class="text-lg text-gray-400 leading-relaxed mb-8">
+                            Acreditamos que capital financeiro é commodity. O que realmente muda o jogo é o <strong>capital intelectual e relacional</strong> que oferecemos.
+                        </p>
+                        <a href="#registration" class="hidden lg:inline-flex items-center px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-lg hover:bg-white/10 hover:border-brand-primary/50 transition-all shadow-xl hover:shadow-2xl">
+                            Fale com um consultor
+                        </a>
+                    </div>
+                    <!-- Container for JS injected features -->
+                    <div id="features-container" class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glossary Section -->
+        <section id="glossary" class="py-24 bg-brand-surfaceLight relative">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-up">
+                    <h2 class="text-3xl font-bold text-white">Glossário de Venture Capital</h2>
+                    <p class="text-gray-400 mt-4">Domine a linguagem do Venture Capital para negociar melhor.</p>
+                </div>
+                <!-- Container for JS injected items -->
+                <div id="glossary-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-24 bg-brand-surface text-white relative border-y border-white/5">
+            <div class="absolute inset-0 z-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-16 fade-up">
+                    <h2 class="text-4xl font-black mb-4">Quem Faz Acontecer</h2>
+                </div>
+                <!-- Container for JS injected items -->
+                <div id="team-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12"></div>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section id="registration" class="py-24 bg-black relative overflow-hidden">
+            <!-- Background decorations -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-16 fade-up">
+                    <h2 class="text-3xl md:text-5xl font-black text-white mb-6">Inscreva sua Startup</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto text-lg">Dê o primeiro passo para transformar sua ideia em um negócio escalável com o apoio dos melhores.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    
+                    <!-- Option 1: Direct Registration (Takes up 2 cols on lg) -->
+                    <div class="lg:col-span-2 fade-up">
+                        <div class="glass-card rounded-2xl shadow-xl overflow-hidden bg-brand-surface border-white/10">
+                            <div class="p-8 border-b border-white/10 bg-white/5">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="bg-white/10 p-2 rounded-lg text-white">
+                                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-white">Cadastro Direto</h3>
+                                </div>
+                                <p class="text-sm text-gray-400 ml-12">Preencha o formulário abaixo para iniciar sua jornada conosco.</p>
+                            </div>
+                            
+                            <div class="p-8">
+                                <form id="startup-form" class="space-y-6">
+                                    <!-- Success Message Container (Hidden by default) -->
+                                    <div id="form-success" class="hidden text-center py-12">
+                                        <div class="w-16 h-16 bg-green-900/50 text-green-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-800">
+                                            <i data-lucide="check" class="w-8 h-8"></i>
+                                        </div>
+                                        <h4 class="text-xl font-bold text-white mb-2">Cadastro Recebido!</h4>
+                                        <p class="text-gray-400">Sua inscrição foi enviada com sucesso. Nossa equipe entrará em contato em breve.</p>
+                                        <button type="button" onclick="resetForm()" class="mt-6 text-brand-primary font-medium hover:underline">Enviar nova inscrição</button>
+                                    </div>
+
+                                    <!-- Fields Container -->
+                                    <div id="form-fields" class="space-y-6">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <div class="space-y-2">
+                                                <label for="startup-name" class="text-sm font-medium text-gray-400">Nome da Startup</label>
+                                                <input type="text" id="startup-name" required class="w-full px-4 py-3 rounded-lg bg-brand-surfaceLight border border-white/10 text-white focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all placeholder-gray-600" placeholder="Ex: TechSolution">
+                                            </div>
+                                            <div class="space-y-2">
+                                                <label for="founder-name" class="text-sm font-medium text-gray-400">Nome do Fundador</label>
+                                                <input type="text" id="founder-name" required class="w-full px-4 py-3 rounded-lg bg-brand-surfaceLight border border-white/10 text-white focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all placeholder-gray-600" placeholder="Seu nome completo">
+                                            </div>
+                                        </div>
+
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <div class="space-y-2">
+                                                <label for="email" class="text-sm font-medium text-gray-400">E-mail Corporativo</label>
+                                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg bg-brand-surfaceLight border border-white/10 text-white focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all placeholder-gray-600" placeholder="contato@suaempresa.com">
+                                            </div>
+                                            <div class="space-y-2">
+                                                <label for="phone" class="text-sm font-medium text-gray-400">Telefone / WhatsApp</label>
+                                                <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-lg bg-brand-surfaceLight border border-white/10 text-white focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all placeholder-gray-600" placeholder="(00) 00000-0000">
+                                            </div>
+                                        </div>
+
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <div class="space-y-2">
+                                                <label for="location" class="text-sm font-medium text-gray-400">Cidade / Estado</label>
+                                                <input type="text" id="location" required class="w-full px-4 py-3 rounded-lg bg-brand-surfaceLight border border-white/10 text-white focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all placeholder-gray-600" placeholder="São Paulo, SP">
+                                            </div>
+                                            <div class="space-y-2">
+                                                <label for="stage" class="text-sm font-medium text-gray-400">Estágio Atual</label>
+                                                <div class="relative">
+                                                    <select id="stage" required class="w-full px-4 py-3 rounded-lg bg-brand-surfaceLight border border-white/10 text-white focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all appearance-none">
+                                                        <option value="" disabled selected>Selecione uma opção</option>
+                                                        <option value="ideia">Ideação (Apenas a ideia)</option>
+                                                        <option value="mvp">MVP (Produto Mínimo Viável)</option>
+                                                        <option value="validacao">Validação (Primeiros testes)</option>
+                                                        <option value="tracao">Tração (Já fatura)</option>
+                                                    </select>
+                                                    <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-500">
+                                                        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-y-2">
+                                            <label for="description" class="text-sm font-medium text-gray-400">Breve descrição do negócio</label>
+                                            <textarea id="description" rows="4" required class="w-full px-4 py-3 rounded-lg bg-brand-surfaceLight border border-white/10 text-white focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all resize-none placeholder-gray-600" placeholder="Conte-nos o que sua startup faz e qual problema ela resolve..."></textarea>
+                                        </div>
+
+                                        <div class="flex items-start gap-3 pt-2">
+                                            <div class="flex items-center h-5">
+                                                <input id="terms" type="checkbox" required class="w-4 h-4 text-brand-primary border-gray-600 rounded focus:ring-brand-primary focus:ring-offset-0 bg-black">
+                                            </div>
+                                            <label for="terms" class="text-sm text-gray-400">
+                                                Concordo com os <a href="#" class="text-brand-primary hover:underline">termos de privacidade</a> e autorizo o contato da equipe Valley Avançar.
+                                            </label>
+                                        </div>
+
+                                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-primary to-brand-accent hover:brightness-110 text-white font-bold rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 group">
+                                            <span>Cadastrar Startup</span>
+                                            <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Option 2: External Link (Takes up 1 col on lg, sticky maybe?) -->
+                    <div class="lg:col-span-1 fade-up" style="transition-delay: 200ms;">
+                        <div class="bg-brand-surface text-white rounded-2xl shadow-xl overflow-hidden sticky top-24 border border-white/10">
+                            <div class="p-8 relative overflow-hidden">
+                                <!-- Decoration -->
+                                <div class="absolute top-0 right-0 -mr-12 -mt-12 w-40 h-40 bg-brand-accent/10 rounded-full blur-2xl"></div>
+                                
+                                <div class="flex items-center justify-center w-16 h-16 bg-white/10 rounded-2xl mb-6 backdrop-blur-sm">
+                                    <i data-lucide="external-link" class="w-8 h-8 text-white"></i>
+                                </div>
+                                
+                                <h3 class="text-2xl font-bold mb-4">Prefere usar o Google Forms?</h3>
+                                <p class="text-gray-400 mb-8 leading-relaxed">
+                                    Caso você já tenha seus dados organizados ou prefira a interface do Google, utilize nosso formulário externo. A análise será a mesma.
+                                </p>
+                                
+                                <a href="https://docs.google.com/forms" target="_blank" rel="noopener noreferrer" class="block w-full py-4 bg-white text-black font-bold text-center rounded-lg hover:bg-gray-200 transition-colors shadow-lg flex items-center justify-center gap-2 group">
+                                    <span>Cadastrar via Google Forms</span>
+                                    <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                                </a>
+
+                                <div class="mt-8 pt-8 border-t border-white/10">
+                                    <h4 class="font-bold mb-2 text-sm uppercase tracking-wider text-brand-primary">Dúvidas?</h4>
+                                    <p class="text-sm text-gray-400 mb-4">Nossa equipe de suporte está disponível para auxiliar no processo.</p>
+                                    <a href="#contact" class="text-sm font-medium text-white hover:text-brand-primary transition-colors flex items-center gap-2">
+                                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                        Fale conosco
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 border-t border-gray-800">
-      <div class="container mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <!-- Brand -->
-          <div>
-            <div class="flex items-center gap-2 mb-6">
-              <div class="bg-brand-primary p-1.5 rounded-lg">
-                <i data-lucide="rocket" class="text-white w-5 h-5"></i>
-              </div>
-              <span class="text-xl font-bold text-white">Vale Avançar</span>
+    <footer class="bg-black text-gray-400 border-t border-white/10">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-brand-primary p-1.5 rounded-lg">
+                            <i data-lucide="rocket" class="text-white w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Valley Avançar</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Transformamos o futuro através do apoio a empreendedores visionários. Do zero à escala global.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Empresa</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Sobre Nós</a></li>
+                        <li><a href="#team" class="hover:text-brand-primary transition-colors">Nossa Equipe</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Carreiras</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Imprensa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Programa</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#timeline" class="hover:text-brand-primary transition-colors">Processo de Seleção</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Para Investidores</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Portfólio</a></li>
+                        <li><a href="#glossary" class="hover:text-brand-primary transition-colors">Glossário VC</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div id="contact">
+                    <h4 class="text-white font-bold mb-6">Contato</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-primary shrink-0"></i>
+                            <span>Av. Inovação, 1000 - Tech Park<br />São Paulo, SP</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-primary shrink-0"></i>
+                            <span>contato@valleyavancar.com.br</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-sm leading-relaxed mb-6">
-              Transformamos o futuro através do apoio a empreendedores
-              visionários. Do zero à escala global.
-            </p>
-            <div class="flex gap-4">
-              <a href="#" class="hover:text-white transition-colors"
-                ><i data-lucide="instagram" class="w-5 h-5"></i
-              ></a>
-              <a href="#" class="hover:text-white transition-colors"
-                ><i data-lucide="linkedin" class="w-5 h-5"></i
-              ></a>
-              <a href="#" class="hover:text-white transition-colors"
-                ><i data-lucide="facebook" class="w-5 h-5"></i
-              ></a>
+        </div>
+        <div class="border-t border-white/5">
+            <div class="container mx-auto px-6 py-6 text-center text-xs text-gray-500">
+                &copy; <span id="year"></span> Valley Avançar. Todos os direitos reservados.
             </div>
-          </div>
-
-          <!-- Links 1 -->
-          <div>
-            <h4 class="text-white font-bold mb-6">Empresa</h4>
-            <ul class="space-y-3 text-sm">
-              <li>
-                <a href="#" class="hover:text-brand-primary transition-colors"
-                  >Sobre Nós</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#team"
-                  class="hover:text-brand-primary transition-colors"
-                  >Nossa Equipe</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition-colors"
-                  >Carreiras</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition-colors"
-                  >Imprensa</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Links 2 -->
-          <div>
-            <h4 class="text-white font-bold mb-6">Programa</h4>
-            <ul class="space-y-3 text-sm">
-              <li>
-                <a
-                  href="#timeline"
-                  class="hover:text-brand-primary transition-colors"
-                  >Processo de Seleção</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition-colors"
-                  >Para Investidores</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition-colors"
-                  >Portfólio</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#glossary"
-                  class="hover:text-brand-primary transition-colors"
-                  >Glossário VC</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contact -->
-          <div id="contact">
-            <h4 class="text-white font-bold mb-6">Contato</h4>
-            <ul class="space-y-4 text-sm">
-              <li class="flex gap-3">
-                <i
-                  data-lucide="map-pin"
-                  class="w-5 h-5 text-brand-primary shrink-0"
-                ></i>
-                <span>Av. Inovação, 1000 - Tech Park<br />São Paulo, SP</span>
-              </li>
-              <li class="flex gap-3">
-                <i
-                  data-lucide="mail"
-                  class="w-5 h-5 text-brand-primary shrink-0"
-                ></i>
-                <span>contato@valeavancar.com.br</span>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
-      <div class="border-t border-gray-800">
-        <div
-          class="container mx-auto px-6 py-6 text-center text-xs text-gray-500"
-        >
-          &copy; <span id="year"></span> Vale Avançar. Todos os direitos
-          reservados.
-        </div>
-      </div>
     </footer>
 
     <!-- Main Logic Script -->
     <script>
-      // Data Constants
-      const TIMELINE_STEPS = [
-        {
-          title: "Incubação",
-          description:
-            "Startup em estágio inicial ('crua'). Estruturação do modelo de negócio, desenvolvimento do produto (MVP) e validação inicial.",
-          icon: "egg",
-        },
-        {
-          title: "Aceleração",
-          description:
-            "Fase de crescimento, tração e validação de mercado robusta. Mentorias estratégicas intensivas para refinar a operação.",
-          icon: "rocket",
-        },
-        {
-          title: "Investimento Anjo",
-          description:
-            "Primeiro aporte financeiro externo. Preparação da governança e estrutura para começar a escalar a operação.",
-          icon: "coins",
-        },
-        {
-          title: "Pré-Seed",
-          description:
-            "Consolidação do produto no mercado e obtenção dos primeiros indicadores chave de desempenho (KPIs) consistentes.",
-          icon: "sprout",
-        },
-        {
-          title: "Seed",
-          description:
-            "Expansão agressiva, crescimento estruturado de equipe e conquista de uma fatia relevante do mercado.",
-          icon: "tree-deciduous",
-        },
-        {
-          title: "Série A",
-          description:
-            "Escala estruturada e crescimento acelerado para dominar o mercado e preparar para rodadas maiores.",
-          icon: "building-2",
-        },
-      ];
+        // Data Constants
+        const TIMELINE_STEPS = [
+          {
+            title: "Incubação",
+            description: "Startup em estágio inicial ('crua'). Estruturação do modelo de negócio, desenvolvimento do produto (MVP) e validação inicial.",
+            icon: "egg"
+          },
+          {
+            title: "Aceleração",
+            description: "Fase de crescimento, tração e validação de mercado robusta. Mentorias estratégicas intensivas para refinar a operação.",
+            icon: "rocket"
+          },
+          {
+            title: "Investimento Anjo",
+            description: "Primeiro aporte financeiro externo. Preparação da governança e estrutura para começar a escalar a operação.",
+            icon: "coins"
+          },
+          {
+            title: "Pré-Seed",
+            description: "Consolidação do produto no mercado e obtenção dos primeiros indicadores chave de desempenho (KPIs) consistentes.",
+            icon: "sprout"
+          },
+          {
+            title: "Seed",
+            description: "Expansão agressiva, crescimento estruturado de equipe e conquista de uma fatia relevante do mercado.",
+            icon: "tree-deciduous"
+          },
+          {
+            title: "Série A",
+            description: "Escala estruturada e crescimento acelerado para dominar o mercado e preparar para rodadas maiores.",
+            icon: "building-2"
+          }
+        ];
 
-      const GLOSSARY_TERMS = [
-        {
-          term: "MVP",
-          fullForm: "Minimum Viable Product",
-          definition:
-            "A versão mais simples de um produto que pode ser lançada para validar uma ideia de negócio.",
-        },
-        {
-          term: "Valuation",
-          definition:
-            "O valor estimado de mercado da startup em um determinado momento, usado para definir o preço das ações.",
-        },
-        {
-          term: "Pitch Deck",
-          definition:
-            "A apresentação visual curta criada para dar aos investidores uma visão geral do plano de negócios.",
-        },
-        {
-          term: "Tração",
-          definition:
-            "Evidência quantitativa de demanda pelo produto. Mostra que a startup está ganhando ímpeto no mercado.",
-        },
-        {
-          term: "CAC & LTV",
-          fullForm: "Custo de Aquisição de Cliente & Lifetime Value",
-          definition:
-            "Métricas fundamentais: quanto custa trazer um cliente e quanto ele rende ao longo do tempo.",
-        },
-        {
-          term: "Burn Rate",
-          definition:
-            "A taxa na qual uma empresa gasta seu capital para financiar despesas gerais antes de gerar fluxo de caixa positivo.",
-        },
-      ];
+        const GLOSSARY_TERMS = [
+          {
+            term: "MVP",
+            fullForm: "Minimum Viable Product",
+            definition: "A versão mais simples de um produto que pode ser lançada para validar uma ideia de negócio."
+          },
+          {
+            term: "Valuation",
+            definition: "O valor estimado de mercado da startup em um determinado momento, usado para definir o preço das ações."
+          },
+          {
+            term: "Pitch Deck",
+            definition: "A apresentação visual curta criada para dar aos investidores uma visão geral do plano de negócios."
+          },
+          {
+            term: "Tração",
+            definition: "Evidência quantitativa de demanda pelo produto. Mostra que a startup está ganhando ímpeto no mercado."
+          },
+          {
+            term: "CAC & LTV",
+            fullForm: "Custo de Aquisição de Cliente & Lifetime Value",
+            definition: "Métricas fundamentais: quanto custa trazer um cliente e quanto ele rende ao longo do tempo."
+          },
+          {
+            term: "Burn Rate",
+            definition: "A taxa na qual uma empresa gasta seu capital para financiar despesas gerais antes de gerar fluxo de caixa positivo."
+          }
+        ];
 
-      const FEATURES = [
-        {
-          title: "Mentorias Especializadas",
-          description:
-            "Acesso a ex-fundadores e executivos de grandes empresas de tecnologia.",
-          icon: "graduation-cap",
-        },
-        {
-          title: "Rede de Investidores",
-          description:
-            "Conexão direta com os maiores fundos de VC e investidores anjo do país.",
-          icon: "network",
-        },
-        {
-          title: "Metodologia Própria",
-          description:
-            "Processos validados que reduzem riscos e aceleram a tomada de decisão.",
-          icon: "book-open",
-        },
-        {
-          title: "Acompanhamento Estratégico",
-          description:
-            "Reuniões periódicas para alinhamento de metas e correção de rotas.",
-          icon: "compass",
-        },
-        {
-          title: "Conexão com Mercado",
-          description:
-            "Pontes comerciais com grandes corporações para testes e vendas B2B.",
-          icon: "briefcase",
-        },
-        {
-          title: "Créditos e Benefícios",
-          description:
-            "Mais de R$ 500k em benefícios, incluindo créditos em nuvem e ferramentas de gestão.",
-          icon: "gift",
-        },
-      ];
+        const FEATURES = [
+          {
+            title: "Mentorias Especializadas",
+            description: "Acesso a ex-fundadores e executivos de grandes empresas de tecnologia.",
+            icon: "graduation-cap"
+          },
+          {
+            title: "Rede de Investidores",
+            description: "Conexão direta com os maiores fundos de VC e investidores anjo do país.",
+            icon: "network"
+          },
+          {
+            title: "Metodologia Própria",
+            description: "Processos validados que reduzem riscos e aceleram a tomada de decisão.",
+            icon: "book-open"
+          },
+          {
+            title: "Acompanhamento Estratégico",
+            description: "Reuniões periódicas para alinhamento de metas e correção de rotas.",
+            icon: "compass"
+          },
+          {
+            title: "Conexão com Mercado",
+            description: "Pontes comerciais com grandes corporações para testes e vendas B2B.",
+            icon: "briefcase"
+          },
+          {
+            title: "Créditos e Benefícios",
+            description: "Mais de R$ 500k em benefícios, incluindo créditos em nuvem e ferramentas de gestão.",
+            icon: "gift"
+          }
+        ];
 
-      const TEAM = [
-        {
-          name: "Carlos M.",
-          role: "Ex-Unicorn Founder",
-          imageUrl:
-            "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop",
-        },
-        {
-          name: "Ana S.",
-          role: "VC Partner",
-          imageUrl:
-            "https://images.unsplash.com/photo-1573496359-136d94205436?q=80&w=1000&auto=format&fit=crop",
-        },
-        {
-          name: "Ricardo L.",
-          role: "Growth Expert",
-          imageUrl:
-            "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop",
-        },
-        {
-          name: "Juliana K.",
-          role: "Product Lead",
-          imageUrl:
-            "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop",
-        },
-      ];
+        const TEAM = [
+          {
+            name: "Carlos M.",
+            role: "Ex-Unicorn Founder",
+            imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop"
+          },
+          {
+            name: "Ana S.",
+            role: "VC Partner",
+            imageUrl: "https://images.unsplash.com/photo-1573496359-136d94205436?q=80&w=1000&auto=format&fit=crop"
+          },
+          {
+            name: "Ricardo L.",
+            role: "Growth Expert",
+            imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop"
+          },
+          {
+            name: "Juliana K.",
+            role: "Product Lead",
+            imageUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop"
+          }
+        ];
 
-      // Rendering Functions
-      function renderTimeline() {
-        const container = document.getElementById("timeline-container");
-        let html = "";
-
-        TIMELINE_STEPS.forEach((step, index) => {
-          const isEven = index % 2 === 0;
-          const alignmentClass = isEven ? "md:flex-row-reverse" : "md:flex-row";
-          const paddingClass = isEven
-            ? "md:pr-12 md:text-right"
-            : "md:pl-12 md:text-left";
-          const iconMargin = isEven ? "md:ml-auto" : "";
-
-          html += `
+        // Rendering Functions
+        function renderTimeline() {
+            const container = document.getElementById('timeline-container');
+            let html = '';
+            
+            TIMELINE_STEPS.forEach((step, index) => {
+                const isEven = index % 2 === 0;
+                const alignmentClass = isEven ? 'md:flex-row-reverse' : 'md:flex-row';
+                const paddingClass = isEven ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left';
+                const iconMargin = isEven ? 'md:ml-auto' : '';
+                
+                html += `
                 <div class="fade-up relative flex items-start md:items-center ${alignmentClass}">
                     <!-- Icon Node -->
-                    <div class="absolute left-0 md:left-1/2 -translate-x-1/2 md:-translate-x-1/2 flex items-center justify-center w-9 h-9 rounded-full bg-brand-dark border-4 border-brand-primary z-20 shadow-[0_0_15px_rgba(37,99,235,0.5)]">
+                    <div class="absolute left-0 md:left-1/2 -translate-x-1/2 md:-translate-x-1/2 flex items-center justify-center w-9 h-9 rounded-full bg-brand-surface border-4 border-brand-primary z-20 shadow-[0_0_15px_rgba(0,128,0,0.5)]">
                         <div class="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                     
@@ -1321,76 +784,75 @@
                     
                     <!-- Content -->
                     <div class="w-full md:w-1/2 pl-12 md:pl-0 ${paddingClass}">
-                        <div class="dark-glass-card p-6 rounded-xl border border-gray-700 hover:border-brand-primary transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(37,99,235,0.2)]">
-                            <div class="inline-flex items-center justify-center p-3 rounded-lg bg-gray-900 text-brand-primary mb-4 group-hover:text-brand-accent transition-colors ${iconMargin}">
+                        <div class="dark-glass-card p-6 rounded-xl border border-white/10 hover:border-brand-primary transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,128,0,0.2)]">
+                            <div class="inline-flex items-center justify-center p-3 rounded-lg bg-white/5 text-white mb-4 group-hover:text-brand-accent transition-colors ${iconMargin}">
                                 <i data-lucide="${step.icon}" class="w-6 h-6"></i>
                             </div>
                             <h4 class="text-xl font-bold text-white mb-2">${step.title}</h4>
-                            <p class="text-gray-400 text-sm leading-relaxed">${step.description}</p>
+                            <p class="text-gray-300 text-sm leading-relaxed">${step.description}</p>
                         </div>
                     </div>
                 </div>
                 `;
-        });
-        container.innerHTML = html;
-      }
+            });
+            container.innerHTML = html;
+        }
 
-      function renderGlossary() {
-        const container = document.getElementById("glossary-container");
-        let html = "";
-        GLOSSARY_TERMS.forEach((item, index) => {
-          const fullFormHtml = item.fullForm
-            ? `<p class="text-xs font-semibold text-brand-accent mb-2 uppercase tracking-wide">${item.fullForm}</p>`
-            : "";
-
-          // Add staggered delay for animation
-          const delay = index * 50;
-
-          html += `
-                <div class="fade-up glass-card p-8 rounded-xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group" style="transition-delay: ${delay}ms">
+        function renderGlossary() {
+            const container = document.getElementById('glossary-container');
+            let html = '';
+            GLOSSARY_TERMS.forEach((item, index) => {
+                const fullFormHtml = item.fullForm ? 
+                    `<p class="text-xs font-semibold text-brand-accent mb-2 uppercase tracking-wide">${item.fullForm}</p>` : '';
+                
+                // Add staggered delay for animation
+                const delay = index * 50;
+                
+                html += `
+                <div class="fade-up glass-card p-8 rounded-xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group hover:border-brand-primary/50" style="transition-delay: ${delay}ms">
                     <div class="flex items-baseline justify-between mb-3">
-                        <h3 class="text-xl font-extrabold text-brand-dark group-hover:text-brand-primary transition-colors">
+                        <h3 class="text-xl font-extrabold text-white group-hover:text-brand-primary transition-colors">
                             ${item.term}
                         </h3>
                     </div>
                     ${fullFormHtml}
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-400 text-sm leading-relaxed">
                         ${item.definition}
                     </p>
                 </div>
                 `;
-        });
-        container.innerHTML = html;
-      }
+            });
+            container.innerHTML = html;
+        }
 
-      function renderFeatures() {
-        const container = document.getElementById("features-container");
-        let html = "";
-        FEATURES.forEach((feature, index) => {
-          const delay = index * 50;
-          html += `
-                <div class="fade-up flex gap-4 p-6 rounded-xl bg-white border border-gray-100 hover:border-brand-primary/30 transition-all shadow-md hover:shadow-xl hover:-translate-y-1" style="transition-delay: ${delay}ms">
+        function renderFeatures() {
+            const container = document.getElementById('features-container');
+            let html = '';
+            FEATURES.forEach((feature, index) => {
+                 const delay = index * 50;
+                html += `
+                <div class="fade-up flex gap-4 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-brand-primary/50 transition-all shadow-md hover:shadow-xl hover:-translate-y-1" style="transition-delay: ${delay}ms">
                     <div class="flex-shrink-0">
-                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-brand-primary shadow-inner">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-white shadow-inner">
                             <i data-lucide="${feature.icon}" class="w-6 h-6"></i>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-lg font-bold text-gray-900 mb-2">${feature.title}</h4>
-                        <p class="text-gray-600 text-sm">${feature.description}</p>
+                        <h4 class="text-lg font-bold text-white mb-2">${feature.title}</h4>
+                        <p class="text-gray-400 text-sm">${feature.description}</p>
                     </div>
                 </div>
                 `;
-        });
-        container.innerHTML = html;
-      }
+            });
+            container.innerHTML = html;
+        }
 
-      function renderTeam() {
-        const container = document.getElementById("team-container");
-        let html = "";
-        TEAM.forEach((member, index) => {
-          const delay = index * 100;
-          html += `
+        function renderTeam() {
+            const container = document.getElementById('team-container');
+            let html = '';
+            TEAM.forEach((member, index) => {
+                 const delay = index * 100;
+                html += `
                 <div class="fade-up flex flex-col items-center text-center group" style="transition-delay: ${delay}ms">
                     <!-- Image Container -->
                     <div class="w-40 h-40 mb-6 relative">
@@ -1407,151 +869,139 @@
                     <p class="text-brand-primary font-bold text-sm uppercase tracking-widest">${member.role}</p>
                 </div>
                 `;
-        });
-        container.innerHTML = html;
-      }
-
-      // Interactivity
-      document.addEventListener("DOMContentLoaded", () => {
-        // Render Content
-        renderTimeline();
-        renderGlossary();
-        renderFeatures();
-        renderTeam();
-        document.getElementById("year").textContent = new Date().getFullYear();
-
-        // Initialize Icons
-        lucide.createIcons();
-
-        // Setup Header Scroll Effect
-        const header = document.getElementById("main-header");
-        const handleScroll = () => {
-          if (window.scrollY > 20) {
-            header.classList.add(
-              "bg-brand-dark/95",
-              "backdrop-blur-md",
-              "shadow-lg",
-              "py-3",
-            );
-            header.classList.remove("bg-transparent", "py-5");
-          } else {
-            header.classList.remove(
-              "bg-brand-dark/95",
-              "backdrop-blur-md",
-              "shadow-lg",
-              "py-3",
-            );
-            header.classList.add("bg-transparent", "py-5");
-          }
-        };
-        window.addEventListener("scroll", handleScroll);
-
-        // Mobile Menu (Sidebar with Backdrop Blur)
-        const menuBtn = document.getElementById("mobile-menu-btn");
-        const overlay = document.getElementById("mobile-menu-overlay");
-        const backdrop = document.getElementById("mobile-menu-backdrop");
-        const panel = document.getElementById("mobile-menu-panel");
-        const closeBtn = document.getElementById("mobile-menu-close");
-        const mobileLinks = document.querySelectorAll(".mobile-link");
-
-        function openMenu() {
-          overlay.classList.remove("hidden");
-          // Force reflow to ensure transition works
-          void overlay.offsetWidth;
-
-          // Show backdrop and slide in panel
-          backdrop.classList.remove("opacity-0");
-          panel.classList.remove("translate-x-full");
-
-          // Lock body scroll
-          document.body.style.overflow = "hidden";
+            });
+            container.innerHTML = html;
         }
 
-        function closeMenu() {
-          // Fade out backdrop and slide out panel
-          backdrop.classList.add("opacity-0");
-          panel.classList.add("translate-x-full");
+        // Interactivity
+        document.addEventListener('DOMContentLoaded', () => {
+            // Render Content
+            renderTimeline();
+            renderGlossary();
+            renderFeatures();
+            renderTeam();
+            document.getElementById('year').textContent = new Date().getFullYear();
 
-          // Unlock body scroll
-          document.body.style.overflow = "";
+            // Initialize Icons
+            lucide.createIcons();
 
-          // Hide overlay after transition finishes
-          setTimeout(() => {
-            overlay.classList.add("hidden");
-          }, 300);
-        }
+            // Setup Header Scroll Effect
+            const header = document.getElementById('main-header');
+            const handleScroll = () => {
+                if (window.scrollY > 20) {
+                    header.classList.add('bg-brand-surface/90', 'backdrop-blur-md', 'shadow-lg', 'py-3', 'border-b', 'border-white/5');
+                    header.classList.remove('bg-transparent', 'py-5');
+                } else {
+                    header.classList.remove('bg-brand-surface/90', 'backdrop-blur-md', 'shadow-lg', 'py-3', 'border-b', 'border-white/5');
+                    header.classList.add('bg-transparent', 'py-5');
+                }
+            };
+            window.addEventListener('scroll', handleScroll);
 
-        menuBtn.addEventListener("click", openMenu);
-        closeBtn.addEventListener("click", closeMenu);
-        backdrop.addEventListener("click", closeMenu);
+            // Mobile Menu (Sidebar with Backdrop Blur)
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const backdrop = document.getElementById('mobile-menu-backdrop');
+            const panel = document.getElementById('mobile-menu-panel');
+            const closeBtn = document.getElementById('mobile-menu-close');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        mobileLinks.forEach((link) => {
-          link.addEventListener("click", closeMenu);
-        });
-
-        // Intersection Observer for Animations (Replacement for framer-motion)
-        const observerOptions = {
-          root: null,
-          rootMargin: "0px",
-          threshold: 0.1,
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target); // Only animate once
+            function openMenu() {
+                overlay.classList.remove('hidden');
+                // Force reflow to ensure transition works
+                void overlay.offsetWidth;
+                
+                // Show backdrop and slide in panel
+                backdrop.classList.remove('opacity-0');
+                panel.classList.remove('translate-x-full');
+                
+                // Lock body scroll
+                document.body.style.overflow = 'hidden';
             }
-          });
-        }, observerOptions);
 
-        // Observe elements generated dynamically and static ones
-        // We use a timeout to ensure dynamic content is in DOM
-        setTimeout(() => {
-          const animatedElements = document.querySelectorAll(".fade-up");
-          animatedElements.forEach((el) => observer.observe(el));
-        }, 100);
+            function closeMenu() {
+                // Fade out backdrop and slide out panel
+                backdrop.classList.add('opacity-0');
+                panel.classList.add('translate-x-full');
+                
+                // Unlock body scroll
+                document.body.style.overflow = '';
+                
+                // Hide overlay after transition finishes
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300);
+            }
 
-        // Form Handling
-        const form = document.getElementById("startup-form");
-        const successMsg = document.getElementById("form-success");
-        const formFields = document.getElementById("form-fields");
+            menuBtn.addEventListener('click', openMenu);
+            closeBtn.addEventListener('click', closeMenu);
+            backdrop.addEventListener('click', closeMenu);
 
-        if (form) {
-          form.addEventListener("submit", (e) => {
-            e.preventDefault();
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
 
-            // Simple visual simulation
-            const btn = form.querySelector('button[type="submit"]');
+            // Intersection Observer for Animations (Replacement for framer-motion)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
-            // Loading state
-            btn.disabled = true;
-            btn.innerHTML = '<span class="animate-pulse">Enviando...</span>';
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
 
+            // Observe elements generated dynamically and static ones
+            // We use a timeout to ensure dynamic content is in DOM
             setTimeout(() => {
-              formFields.classList.add("hidden");
-              successMsg.classList.remove("hidden");
+                const animatedElements = document.querySelectorAll('.fade-up');
+                animatedElements.forEach(el => observer.observe(el));
+            }, 100);
 
-              // Scroll to form top smoothly
-              form.scrollIntoView({ behavior: "smooth", block: "center" });
-            }, 1500);
-          });
+            // Form Handling
+            const form = document.getElementById('startup-form');
+            const successMsg = document.getElementById('form-success');
+            const formFields = document.getElementById('form-fields');
+
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Simple visual simulation
+                    const btn = form.querySelector('button[type="submit"]');
+                    
+                    // Loading state
+                    btn.disabled = true;
+                    btn.innerHTML = '<span class="animate-pulse">Enviando...</span>';
+                    
+                    setTimeout(() => {
+                        formFields.classList.add('hidden');
+                        successMsg.classList.remove('hidden');
+                        
+                        // Scroll to form top smoothly
+                        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 1500);
+                });
+            }
+        });
+
+        function resetForm() {
+            document.getElementById('startup-form').reset();
+            document.getElementById('form-success').classList.add('hidden');
+            document.getElementById('form-fields').classList.remove('hidden');
+            
+            // Reset button
+            const btn = document.querySelector('#startup-form button[type="submit"]');
+            btn.disabled = false;
+            btn.innerHTML = `<span>Cadastrar Startup</span> <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>`;
+            lucide.createIcons(); // Refresh icons
         }
-      });
-
-      function resetForm() {
-        document.getElementById("startup-form").reset();
-        document.getElementById("form-success").classList.add("hidden");
-        document.getElementById("form-fields").classList.remove("hidden");
-
-        // Reset button
-        const btn = document.querySelector(
-          '#startup-form button[type="submit"]',
-        );
-        btn.disabled = false;
-        btn.innerHTML = `<span>Cadastrar Startup</span> <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>`;
-        lucide.createIcons(); // Refresh icons
-      }
     </script>
-  </body>
+</body>
 </html>
