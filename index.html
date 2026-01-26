@@ -107,16 +107,6 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
 
-      /* Header Scrolled State */
-      #main-header.scrolled {
-        background-color: rgba(9, 9, 11, 0.95); /* brand-surface with opacity */
-        backdrop-filter: blur(12px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-        padding-top: 0.75rem; /* py-3 */
-        padding-bottom: 0.75rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      }
-
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 10px;
@@ -197,12 +187,79 @@
         </nav>
 
         <!-- Mobile Menu Button -->
-        <button
-          id="mobile-menu-btn"
-          class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
-        >
-          <i data-lucide="menu" class="w-6 h-6"></i>
+        <button id="mobile-menu-btn" class="md:hidden text-white p-1">
+          <i data-lucide="menu"></i>
         </button>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div
+        id="mobile-menu-overlay"
+        class="fixed inset-0 z-[100] hidden"
+        aria-labelledby="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+      >
+        <!-- Backdrop with Blur -->
+        <div
+          id="mobile-menu-backdrop"
+          class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300"
+        ></div>
+
+        <!-- Right Sidebar Panel -->
+        <div
+          id="mobile-menu-panel"
+          class="absolute right-0 top-0 h-full w-[280px] bg-brand-surface border-l border-white/10 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col"
+        >
+          <div
+            class="flex items-center justify-between p-6 border-b border-white/10"
+          >
+            <span class="text-xl font-bold text-white">Menu</span>
+            <button
+              id="mobile-menu-close"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+          </div>
+
+          <div class="flex flex-col p-6 gap-6 overflow-y-auto">
+            <a
+              href="#timeline"
+              class="text-gray-300 hover:text-brand-accent text-lg font-medium mobile-link transition-colors flex items-center gap-3"
+            >
+              <i
+                data-lucide="git-branch"
+                class="w-5 h-5 text-brand-primary"
+              ></i>
+              O Caminho
+            </a>
+            <a
+              href="#features"
+              class="text-gray-300 hover:text-brand-accent text-lg font-medium mobile-link transition-colors flex items-center gap-3"
+            >
+              <i data-lucide="star" class="w-5 h-5 text-brand-primary"></i>
+              Diferenciais
+            </a>
+            <a
+              href="#team"
+              class="text-gray-300 hover:text-brand-accent text-lg font-medium mobile-link transition-colors flex items-center gap-3"
+            >
+              <i data-lucide="users" class="w-5 h-5 text-brand-primary"></i>
+              Equipe
+            </a>
+
+            <div class="pt-6 mt-auto border-t border-white/10">
+              <a
+                href="#registration"
+                class="w-full py-3 bg-gradient-to-r from-brand-primary to-brand-accent text-white text-center font-bold rounded-lg mobile-link shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2"
+              >
+                <span>Quero fazer parte</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -533,11 +590,59 @@
             </p>
           </div>
 
-          <!-- React App Mount Point -->
-          <div
-            id="veo-root"
-            class="fade-up w-full flex justify-center min-h-[400px]"
-          ></div>
+          <!-- Video Container -->
+          <div class="max-w-4xl mx-auto fade-up">
+            <!-- Placeholder Card -->
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,128,0,0.15)] border border-white/10 bg-black aspect-video group cursor-pointer group"
+            >
+              <!-- 
+                           INSTRUÇÃO PARA VÍDEO REAL:
+                           1. Grave seu vídeo e salve como .mp4
+                           2. Remova o <img> e a div do botão de play abaixo
+                           3. Descomente a tag <video> e coloque o caminho do arquivo em src=""
+                        -->
+
+              <!-- Poster / Capa (Substituir quando tiver o vídeo) -->
+              <img
+                src="imagens/Vídeo_Gerado_em_Português_Brasileiro.mp4"
+                alt="Vídeo Institucional"
+                class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-300"
+              />
+
+              <!-- Botão Play Fictício -->
+              <div
+                class="absolute inset-0 flex items-center justify-center pointer-events-none"
+              >
+                <div
+                  class="w-20 h-20 bg-brand-primary/90 rounded-full flex items-center justify-center pl-1 shadow-lg group-hover:scale-110 transition-transform duration-300 backdrop-blur-sm"
+                >
+                  <i
+                    data-lucide="play"
+                    class="w-8 h-8 text-white fill-current"
+                  ></i>
+                </div>
+              </div>
+
+              <!-- TAG DE VÍDEO REAL (Descomente para usar) -->
+              
+                        <video 
+                            controls  
+                            loop 
+                            muted 
+                            playsinline 
+                            class="absolute inset-0 w-full h-full object-cover"
+                        >
+                            <source src="imagens/Vídeo_Gerado_em_Português_Brasileiro.mp4" type="video/mp4">
+                            Seu navegador não suporta a tag de vídeo.
+                        </video> 
+            </div>
+            <p
+              class="text-center text-xs text-gray-500 mt-4 uppercase tracking-wider"
+            >
+              Apresentação Oficial
+            </p>
+          </div>
         </div>
       </section>
 
@@ -991,73 +1096,6 @@
       </section>
     </main>
 
-    <!-- Mobile Menu Overlay -->
-    <div
-      id="mobile-menu-overlay"
-      class="fixed inset-0 z-[100] hidden"
-      aria-labelledby="mobile-menu"
-      role="dialog"
-      aria-modal="true"
-    >
-      <!-- Backdrop with Blur -->
-      <div
-        id="mobile-menu-backdrop"
-        class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300"
-      ></div>
-
-      <!-- Right Sidebar Panel -->
-      <div
-        id="mobile-menu-panel"
-        class="absolute right-0 top-0 h-full w-[280px] bg-brand-surface border-l border-white/10 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col"
-      >
-        <div
-          class="flex items-center justify-between p-6 border-b border-white/10"
-        >
-          <span class="text-xl font-bold text-white">Menu</span>
-          <button
-            id="mobile-menu-close"
-            class="text-gray-400 hover:text-white transition-colors p-1"
-          >
-            <i data-lucide="x" class="w-6 h-6"></i>
-          </button>
-        </div>
-
-        <div class="flex flex-col p-6 gap-6 overflow-y-auto">
-          <a
-            href="#timeline"
-            class="text-gray-300 hover:text-brand-accent text-lg font-medium mobile-link transition-colors flex items-center gap-3"
-          >
-            <i data-lucide="git-branch" class="w-5 h-5 text-brand-primary"></i>
-            O Caminho
-          </a>
-          <a
-            href="#features"
-            class="text-gray-300 hover:text-brand-accent text-lg font-medium mobile-link transition-colors flex items-center gap-3"
-          >
-            <i data-lucide="star" class="w-5 h-5 text-brand-primary"></i>
-            Diferenciais
-          </a>
-          <a
-            href="#team"
-            class="text-gray-300 hover:text-brand-accent text-lg font-medium mobile-link transition-colors flex items-center gap-3"
-          >
-            <i data-lucide="users" class="w-5 h-5 text-brand-primary"></i>
-            Equipe
-          </a>
-
-          <div class="pt-6 mt-auto border-t border-white/10">
-            <a
-              href="#registration"
-              class="w-full py-3 bg-gradient-to-r from-brand-primary to-brand-accent text-white text-center font-bold rounded-lg mobile-link shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2"
-            >
-              <span>Quero fazer parte</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Footer -->
     <footer class="bg-black text-gray-400 border-t border-white/10">
       <div class="container mx-auto px-6 py-12">
@@ -1360,8 +1398,6 @@
       // Rendering Functions
       function renderTimeline() {
         const container = document.getElementById("timeline-container");
-        if (!container) return;
-
         let html = "";
 
         TIMELINE_STEPS.forEach((step, index) => {
@@ -1400,8 +1436,6 @@
 
       function renderGlossary() {
         const container = document.getElementById("glossary-container");
-        if (!container) return;
-
         let html = "";
         GLOSSARY_TERMS.forEach((item, index) => {
           const fullFormHtml = item.fullForm
@@ -1430,8 +1464,6 @@
 
       function renderFeatures() {
         const container = document.getElementById("features-container");
-        if (!container) return;
-
         let html = "";
         FEATURES.forEach((feature, index) => {
           const delay = index * 50;
@@ -1454,8 +1486,6 @@
 
       function renderTeam() {
         const container = document.getElementById("team-container");
-        if (!container) return;
-
         let html = "";
         TEAM.forEach((member, index) => {
           const delay = index * 100;
@@ -1482,8 +1512,6 @@
 
       function renderTestimonials() {
         const container = document.getElementById("testimonials-track");
-        if (!container) return;
-
         // Duplicate array for seamless looping (x2)
         const items = [...TESTIMONIALS, ...TESTIMONIALS];
         let html = "";
@@ -1516,29 +1544,37 @@
         renderFeatures();
         renderTeam();
         renderTestimonials();
-
-        const yearEl = document.getElementById("year");
-        if (yearEl) {
-          yearEl.textContent = new Date().getFullYear();
-        }
+        document.getElementById("year").textContent = new Date().getFullYear();
 
         // Initialize Icons
-        if (typeof lucide !== "undefined") {
-          lucide.createIcons();
-        }
+        lucide.createIcons();
 
         // Setup Header Scroll Effect
         const header = document.getElementById("main-header");
-        if (header) {
-          const handleScroll = () => {
-            if (window.scrollY > 20) {
-              header.classList.add("scrolled");
-            } else {
-              header.classList.remove("scrolled");
-            }
-          };
-          window.addEventListener("scroll", handleScroll);
-        }
+        const handleScroll = () => {
+          if (window.scrollY > 20) {
+            header.classList.add(
+              "bg-brand-surface/90",
+              "backdrop-blur-md",
+              "shadow-lg",
+              "py-3",
+              "border-b",
+              "border-white/5",
+            );
+            header.classList.remove("bg-transparent", "py-5");
+          } else {
+            header.classList.remove(
+              "bg-brand-surface/90",
+              "backdrop-blur-md",
+              "shadow-lg",
+              "py-3",
+              "border-b",
+              "border-white/5",
+            );
+            header.classList.add("bg-transparent", "py-5");
+          }
+        };
+        window.addEventListener("scroll", handleScroll);
 
         // Mobile Menu (Sidebar with Backdrop Blur)
         const menuBtn = document.getElementById("mobile-menu-btn");
@@ -1548,42 +1584,40 @@
         const closeBtn = document.getElementById("mobile-menu-close");
         const mobileLinks = document.querySelectorAll(".mobile-link");
 
-        if (menuBtn && overlay && backdrop && panel && closeBtn) {
-          function openMenu() {
-            overlay.classList.remove("hidden");
-            // Force reflow to ensure transition works
-            void overlay.offsetWidth;
+        function openMenu() {
+          overlay.classList.remove("hidden");
+          // Force reflow to ensure transition works
+          void overlay.offsetWidth;
 
-            // Show backdrop and slide in panel
-            backdrop.classList.remove("opacity-0");
-            panel.classList.remove("translate-x-full");
+          // Show backdrop and slide in panel
+          backdrop.classList.remove("opacity-0");
+          panel.classList.remove("translate-x-full");
 
-            // Lock body scroll
-            document.body.style.overflow = "hidden";
-          }
-
-          function closeMenu() {
-            // Fade out backdrop and slide out panel
-            backdrop.classList.add("opacity-0");
-            panel.classList.add("translate-x-full");
-
-            // Unlock body scroll
-            document.body.style.overflow = "";
-
-            // Hide overlay after transition finishes
-            setTimeout(() => {
-              overlay.classList.add("hidden");
-            }, 300);
-          }
-
-          menuBtn.addEventListener("click", openMenu);
-          closeBtn.addEventListener("click", closeMenu);
-          backdrop.addEventListener("click", closeMenu);
-
-          mobileLinks.forEach((link) => {
-            link.addEventListener("click", closeMenu);
-          });
+          // Lock body scroll
+          document.body.style.overflow = "hidden";
         }
+
+        function closeMenu() {
+          // Fade out backdrop and slide out panel
+          backdrop.classList.add("opacity-0");
+          panel.classList.add("translate-x-full");
+
+          // Unlock body scroll
+          document.body.style.overflow = "";
+
+          // Hide overlay after transition finishes
+          setTimeout(() => {
+            overlay.classList.add("hidden");
+          }, 300);
+        }
+
+        menuBtn.addEventListener("click", openMenu);
+        closeBtn.addEventListener("click", closeMenu);
+        backdrop.addEventListener("click", closeMenu);
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
 
         // Intersection Observer for Animations (Replacement for framer-motion)
         const observerOptions = {
@@ -1619,15 +1653,14 @@
 
             // Simple visual simulation
             const btn = form.querySelector('button[type="submit"]');
-            if (btn) {
-              // Loading state
-              btn.disabled = true;
-              btn.innerHTML = '<span class="animate-pulse">Enviando...</span>';
-            }
+
+            // Loading state
+            btn.disabled = true;
+            btn.innerHTML = '<span class="animate-pulse">Enviando...</span>';
 
             setTimeout(() => {
-              if (formFields) formFields.classList.add("hidden");
-              if (successMsg) successMsg.classList.remove("hidden");
+              formFields.classList.add("hidden");
+              successMsg.classList.remove("hidden");
 
               // Scroll to form top smoothly
               form.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -1637,24 +1670,17 @@
       });
 
       function resetForm() {
-        const form = document.getElementById("startup-form");
-        if (form) form.reset();
-
-        const successMsg = document.getElementById("form-success");
-        if (successMsg) successMsg.classList.add("hidden");
-
-        const formFields = document.getElementById("form-fields");
-        if (formFields) formFields.classList.remove("hidden");
+        document.getElementById("startup-form").reset();
+        document.getElementById("form-success").classList.add("hidden");
+        document.getElementById("form-fields").classList.remove("hidden");
 
         // Reset button
         const btn = document.querySelector(
           '#startup-form button[type="submit"]',
         );
-        if (btn) {
-          btn.disabled = false;
-          btn.innerHTML = `<span>Cadastrar Startup</span> <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>`;
-          if (typeof lucide !== "undefined") lucide.createIcons(); // Refresh icons
-        }
+        btn.disabled = false;
+        btn.innerHTML = `<span>Cadastrar Startup</span> <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>`;
+        lucide.createIcons(); // Refresh icons
       }
     </script>
   </body>
